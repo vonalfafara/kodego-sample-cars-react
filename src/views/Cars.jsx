@@ -70,6 +70,12 @@ const Cars = () => {
     setShow(true);
   }
 
+  function handleReset() {
+    setBrand("0");
+    setModel("0");
+    setTransmission("0");
+  }
+
   return (
     <>
       <Container className="mt-4">
@@ -109,13 +115,14 @@ const Cars = () => {
                   );
                 })}
               </Form.Select>
-              <Row>
+              <Row className="mb-4">
                 <Form.Check
                   inline
                   name="transmission"
                   type="radio"
                   label="Manual"
                   value="Manual"
+                  checked={transmission === "Manual"}
                   onChange={(e) => setTransmission(e.target.value)}
                 />
                 <Form.Check
@@ -124,9 +131,11 @@ const Cars = () => {
                   type="radio"
                   label="Automatic"
                   value="Automatic"
+                  checked={transmission === "Automatic"}
                   onChange={(e) => setTransmission(e.target.value)}
                 />
               </Row>
+              <Button onClick={handleReset}>Reset</Button>
             </Form>
           </Col>
           <Col sm="12" md="9">
