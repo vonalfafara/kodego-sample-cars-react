@@ -1,0 +1,22 @@
+.car-card {
+  height: 100% !important;
+}
+
+.car-card .car-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card .car-card-body button {
+  margin-top: auto;
+}
+
+.car-carousel-item {
+  height: 500px;
+}
+
+.car-carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
